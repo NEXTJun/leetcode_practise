@@ -16,6 +16,8 @@
 | 2026-05-03 | 20 | Valid Parentheses | Easy | Solved | 用 stack 檢查括號是否符合後進先出 | O(n) | O(n) | 不需要額外 res；錯誤時直接 return false，最後檢查 stack 是否清空 | 待定 |
 | 2026-09-29 | 121 | Best Time to Buy and Sell Stock | Easy | Solved | 逐日當賣出日，維護先前最低買價與歷史最佳利潤 | O(n) | O(1) | 本輪由 O(n²) 暴力法轉為單次走訪；已獨立實作並口述先買後賣與複雜度 | 2026-10-02 |
 | 2026-10-04 | 198 | House Robber | Medium | Solved | 前綴最佳分拿與不拿，DP 比較 F[i-1] 與 F[i-2]+nums[i] | O(n) | O(n) | 本輪修正 i=1 落入通用轉移造成 F[-1]；通用正確性口述、邊界口述與 O(1) 空間版待複習 | 2026-10-07 |
+| 2026-10-13 | 206 | Reverse Linked List | Easy | Solved | 保存下一節點後改 Next，再推進 prev/curr；prev 為新頭 | O(n) | O(1) | 本輪修正 nil 解參考與過早停止；nil／單節點的獨立口述待複習 | 2026-10-16 |
+| 2026-10-13 | 141 | Linked List Cycle | Easy | Solved | map 記節點身分，再用快慢指標相遇判環 | O(n) | 最終 O(1)；map O(n) | 修正讀取 fast.Next.Next 前的 nil 檢查；一般性 a+c 上界與自環口述待複習 | 2026-10-16 |
 | 2026-05-04 | 217 | Contains Duplicate | Easy | Solved | 用 hash set 記錄已看過的數字，遇到重複就提早回傳 | O(n) | O(n) | 解法正確；命名可從 data 改成 seen 更清楚 | 待定 |
 | 2026-05-04 | 242 | Valid Anagram | Easy | Solved | 排序法直觀；小寫英文字母限制下可用 [26]int 計數法優化 | 排序 O(n log n)；計數 O(n) | 排序 O(n)；計數 O(1) | 兩種方法都要會：排序法好口述，計數法是本題限制下複雜度最優 | 待定 |
 | 2026-09-28 | 704 | Binary Search | Easy | Solved | 閉區間二分搜尋依中點大小排除半邊，直到找到或區間為空 | O(log n) | O(1) | 本輪修正左右移動方向、初始 right 與漏檢最後一格；已能口述原因及複雜度 | 2026-10-05 |
